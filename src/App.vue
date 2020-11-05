@@ -1,18 +1,20 @@
 <template>
-  <div class="app" :class="{'app-aside-folded':!sidebar,'app-header-fixed':settings.headerFixed,'app-aside-fixed':settings.asideFixed,'app-aside-folded':settings.asideFolded,'app-aside-dock':settings.asideDock,container:settings.container}">
-    <!-- navbar -->
+  <!-- 'app-aside-folded':settings.asideFolded, -->
+  <div class="app" :class="{'app-aside-folded':!sidebar,'app-header-fixed':settings.headerFixed,'app-aside-fixed':settings.asideFixed,'app-aside-dock':settings.asideDock,container:settings.container}">
+    
+    <!-- navbar 上部导航条 -->
     <v-header></v-header>
     <!-- / navbar -->
     
-    <!-- nav -->
+    <!-- nav 左侧导航条 -->
     <v-nav></v-nav>
     <!-- / nav -->
 
-    <!-- nav -->
+    <!-- nav 右侧设置悬浮窗 -->
     <v-setings></v-setings>
     <!-- / nav -->
 
-    <!-- content -->
+    <!-- content 主页 -->
     <div class="app-content">
       <div class="app-content-body">
         <transition mode="out-in" enter-active-class="animated fadeInUp" leave-active-class="animated fadeInDown">
@@ -21,6 +23,7 @@
       </div>
     </div>
     <!-- /content -->
+
   </div>
 </template>
 

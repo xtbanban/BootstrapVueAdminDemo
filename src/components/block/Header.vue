@@ -1,24 +1,26 @@
 <template>
   <!-- 顶部导航条，从左到右，左边要注意和左侧导航颜色一致 -->
   <div class="app-header navbar">
+
     <!-- navbar header 左边logo，要和下方导航(app-aside)颜色一致 -->
     <div class="navbar-header" :class="settings.navbarHeaderColor">
-      <!-- 两个按钮，不知何用途 -->
+      <!-- 两个按钮， 当小屏幕时出现最右边，一个集成，一个设置，具体事件未完成 (i标签应为旧版本字体图标，可以改为span)-->
       <button class="pull-right visible-xs dk">
-        <i class="glyphicon glyphicon-cog"></i>
+        <span class="glyphicon glyphicon-cog"></span>
       </button>
       <button class="pull-right visible-xs">
         <i class="glyphicon glyphicon-align-justify"></i>
       </button>
-      <!-- brand -->
+
+      <!-- brand 公司徽章：一个B图标，导航缩小时，只显示它，改为home图标 fa fa-btc-->
       <a href="#/" class="navbar-brand text-lt">
-        <!-- 一个B图标，不要也行 -->
-        <!-- <i class="fa fa-btc"></i> -->
+        <i class="glyphicon glyphicon-home"></i>
         <span class="hidden-folded m-l-xs">Radius Dev</span>
       </a>
       <!-- / brand -->
     </div>
     <!-- / navbar header -->
+
     <!-- navbar collapse -->
     <div
       class="collapse pos-rlt navbar-collapse box-shadow"
@@ -37,6 +39,7 @@
         </a>
       </div>
       <!-- / buttons -->
+
       <!-- link and dropdown -->
       <ul class="nav navbar-nav hidden-sm">
         <li
@@ -251,6 +254,7 @@
         </li>
       </ul>
       <!-- / link and dropdown -->
+
       <!-- search form -->
       <form class="navbar-form navbar-form-sm navbar-left shift">
         <div class="form-group">
@@ -269,6 +273,7 @@
         </div>
       </form>
       <!-- / search form -->
+
       <!-- nabar right -->
       <ul class="nav navbar-nav navbar-right">
         <li class="hidden-xs">
@@ -363,6 +368,7 @@
     <!-- / navbar collapse -->
   </div>
 </template>
+
 <script>
 import fullscreen from "./Header-fullscreen";
 import { mapGetters, mapActions } from "vuex";
